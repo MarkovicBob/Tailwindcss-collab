@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dwello Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,16 +25,20 @@
               clifford: "#da373d",
               background: "#fef7f2",
               button: "#2B1B12",
+              dwellobackground: "#FEF7F2",
+              dwello: "#2B1B12",
+              dwellointeractive: "#DDC7BB",
             },
             fontFamily: {
               Montserrat: ["Montserrat"],
+              montserrat: "montserrat",
             },
           },
         },
       };
     </script>
   </head>
-  <body class="w-[1440px]">
+  <body class="font-montserrat w-[1440px]">
     <header class="bg-background py-4 px-8">
       <nav class="flex justify-between items-center">
         <!-- LOGO -->
@@ -54,7 +64,68 @@
         </div>
       </nav>
     </header>
+    <hero>
+      <div
+        id="heroContainer"
+        class="bg-dwellobackground relative h-[730px] px-[104px] pt-[80px]"
+      >
+        <div id="heroTextImageContainer" class="flex flex-row">
+          <div id="heroTextContainer" class="flex flex-col gap-10">
+            <p
+              class="font-extrabold text-[68px] w-[514px] text-dwello leading-[82.9px]"
+            >
+              Find Your Dream Home
+            </p>
+            <p class="text-lg text-[#4F3527] w-[413px] font-bold mb-8">
+              Explore our curated selection of exquisite properties meticulously
+              tailored to your unique dream home vision
+            </p>
 
+            <div
+              class="bg-dwello text-white rounded-lg w-[176px] h-[58px] text-center text-lg leading-[58px] font-semibold"
+            >
+              Sign up
+            </div>
+          </div>
+          <img
+            src="/images/heroImage.png"
+            class="absolute left-[413px] top-[-150px] w-[1050px] h-[1050px]"
+          />
+        </div>
+
+        <div
+          id="heroSearchContainer"
+          class="absolute bottom-[-80px] left-[185px] bg-dwellointeractive w-[1060px] h-[160px] rounded-[18px] flex items-center justify-center gap-4 shadow-[0_8px_30px_rgba(43,27,18,0.12)]"
+        >
+          <div
+            id="heroLocation"
+            class="text-[#695346] text-lg font-bold bg-[#FBF5F1] flex flex-row items-center leading-[58px] w-[252px] rounded-lg px-4"
+          >
+            <p>Location</p>
+            <img src="/images/locationVectorHero.png" class="ml-auto" />
+          </div>
+          <div
+            id="heroType"
+            class="text-[#695346] text-lg font-bold bg-[#FBF5F1] flex flex-row items-center leading-[58px] w-[252px] rounded-lg px-4"
+          >
+            <p>Type</p>
+            <img src="/images/homeVectorHero.png" class="ml-auto" />
+          </div>
+          <div
+            id="heroPrice"
+            class="text-[#695346] text-lg font-bold bg-[#FBF5F1] flex flex-row items-center leading-[58px] w-[252px] rounded-lg px-4"
+          >
+            <p>Price Range</p>
+            <img src="/images/priceVectorHero.png" class="ml-auto" />
+          </div>
+          <div
+            class="bg-dwello text-white rounded-lg w-[156px] h-[58px] text-center text-lg leading-[58px] font-semibold ml-8"
+          >
+            Sign up
+          </div>
+        </div>
+      </div>
+    </hero>
     <!-- We help you to find your dream home -->
 
     <main class="text-[#4F3527] flex flex-row justify-center gap-[5rem]">
@@ -91,7 +162,87 @@
         </div>
       </div>
     </main>
+    
+    <section class="text-dwello">
+      <div
+        id="WhyTextSection"
+        class="flex flex-col justify-center items-center gap-4 mb-[65px]"
+      >
+        <p class="text-center text-[40px] font-extrabold leading-[56px]">
+          Why Choose Us
+        </p>
+        <p class="text-center text-lg font-bold w-[629px] text-[#4F3527]">
+          Elevating Your Home Buying Experience with Expertise, Integrity, and
+          Unmatched Personalized Service
+        </p>
+      </div>
 
+      <div id="WhyCardContainer" class="flex flex-row gap-10 justify-center">
+        <div
+          id="WhyCard1"
+          class="p-[24px] bg-dwellointeractive rounded-[18px] w-[275px] h-[268px] shadow-[0_4px_30px_rgba(43,27,18,0.12)]"
+        >
+          <div
+            id="WhyCard1Logo"
+            class="bg-[#FBF5F1] rounded-lg w-[83px] h-[83px] p-4 box-border mb-4"
+          >
+            <img src="/images/locationLogoWhy.png" />
+          </div>
+          <p class="font-bold text-lg mb-2">Expert Guidance</p>
+          <p class="font-semibold text-base">
+            Benefit from our team's seasoned expertise for a smooth buying
+            experience
+          </p>
+        </div>
+        <div
+          id="WhyCard2"
+          class="p-[24px] bg-dwellointeractive rounded-[18px] w-[275px] h-[268px] shadow-[0_4px_30px_rgba(43,27,18,0.12)]"
+        >
+          <div
+            id="WhyCard2Logo"
+            class="bg-[#FBF5F1] rounded-lg w-[83px] h-[83px] p-4 box-border mb-4"
+          >
+            <img src="/images/personLogoWhy.png" />
+          </div>
+          <p class="font-bold text-lg mb-2">Personalized Service</p>
+          <p class="font-semibold text-base">
+            Our service adapt to your unique needs, making your jourey
+            stress-free
+          </p>
+        </div>
+        <div
+          id="WhyCard3"
+          class="p-[24px] bg-dwellointeractive rounded-[18px] w-[275px] h-[268px] shadow-[0_4px_30px_rgba(43,27,18,0.12)]"
+        >
+          <div
+            id="WhyCard3Logo"
+            class="bg-[#FBF5F1] rounded-lg w-[83px] h-[83px] p-4 box-border mb-4"
+          >
+            <img src="/images/documentLogoWhy.png" />
+          </div>
+          <p class="font-bold text-lg mb-2">Transparent Process</p>
+          <p class="font-semibold text-base">
+            Stay informed with our clear and honest approach to buying your home
+          </p>
+        </div>
+        <div
+          id="WhyCard4"
+          class="p-[24px] bg-dwellointeractive rounded-[18px] w-[275px] h-[268px] shadow-[0_4px_30px_rgba(43,27,18,0.12)]"
+        >
+          <div
+            id="WhyCard4Logo"
+            class="bg-[#FBF5F1] rounded-lg w-[83px] h-[83px] p-4 box-border mb-4"
+          >
+            <img src="/images/handshakeLogoWhy.png" />
+          </div>
+          <p class="font-bold text-lg mb-2">Exceptional Support</p>
+          <p class="font-semibold text-base">
+            Providing peace of mind with our responsive and attentive customer
+            service
+          </p>
+        </div>
+      </div>
+    </section>
     <!--Patrick Our residences -->
 
     <section>
@@ -408,5 +559,45 @@
         </button>
       </div>
     </main>
+    <footer
+      class="flex flex-row px-[104px] bg-dwellointeractive h-[539px] pt-20 gap-[149px]"
+    >
+      <div id="footerLogoTextSection" class="w-[219px]">
+        <img src="/images/dwelloLogoFooter.png" class="w-[93px]" />
+        <p class="text-lg font-bold mt-8 text-[#4F3527]">
+          Bringing you closer to your dream home, one click at a time.
+        </p>
+      </div>
+
+      <div
+        id="linkContainer"
+        class="grid grid-cols-4 gap-8 text-lg font-bold text-[#4F3527] h-[245px] mt-[12px]"
+      >
+        <div class="text-dwello text-[22px]">About</div>
+        <div class="text-dwello text-[22px]">Support</div>
+        <div class="text-dwello text-[22px]">Find Us</div>
+        <div class="text-dwello text-[22px]">Our Social</div>
+        <div>Our Story</div>
+        <div>FAQ</div>
+        <div>Events</div>
+        <div class="flex flex-row gap-[18px]">
+          <img src="/images/instaVectorFooter.png" class="w-8 h-8" />Instagram
+        </div>
+        <div>Careers</div>
+        <div>Contact Us</div>
+        <div>Locations</div>
+        <div class="flex flex-row gap-[18px]">
+          <img src="/images/facebookVectorFooter.png" class="w-8 h-8" />Facebook
+        </div>
+        <div>Our Team</div>
+        <div>Help Center</div>
+        <div>Newsletter</div>
+        <div class="flex flex-row gap-[18px]">
+          <img src="/images/xVectorFooter.png" class="w-8 h-8" />Twitter (x)
+        </div>
+        <div>Resources</div>
+        <div>Terms of Service</div>
+      </div>
+    </footer>
   </body>
 </html>
