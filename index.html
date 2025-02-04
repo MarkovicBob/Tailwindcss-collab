@@ -5,12 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dwello Project</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              clifford: "#FFFFFF",
+              clifford: "#da373d",
+              background: "#fef7f2",
+              button: "#2B1B12",
+            },
+            fontFamily: {
+              Montserrat: ["Montserrat"],
             },
           },
         },
@@ -18,26 +29,166 @@
     </script>
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li>Logo</li>
-          <li>Home</li>
-          <li>Service</li>
-          <li>Agents</li>
-          <li>Contact</li>
-          <li>Find</li>
-          <li>Account</li>
-          <li>Sign up</li>
-        </ul>
+    <header class="bg-background py-4 px-8">
+      <nav class="flex justify-between items-center">
+        <!-- LOGO -->
+        <img src="/logo.png" alt="Dwello Logo" class="w-24" />
+
+        <!-- NAV LINKS -->
+        <div class="flex space-x-8 text-black font-Montserrat font-bold">
+          <a href="#" class="hover:text-gray-600">Home</a>
+          <a href="#" class="hover:text-gray-600">Service</a>
+          <a href="#" class="hover:text-gray-600">Agents</a>
+          <a href="#" class="hover:text-gray-600">Contact</a>
+        </div>
+
+        <!-- ICONS & SIGNUP BUTTON -->
+        <div class="flex items-center space-x-6">
+          <img src="/search.png" alt="searchIcon" />
+          <img src="/user.png" alt="userIcon" />
+          <button
+            class="bg-button text-white font-bold py-2 px-4 rounded-lg hover:opacity-80"
+          >
+            Sign up
+          </button>
+        </div>
       </nav>
     </header>
-    <hero>Find Your Dream Home</hero>
-    <section>WE help to find</section>
-    <section>Why Choose Us</section>
-    <section>Our Popular Residences</section>
-    <section>What People Say About Dwello</section>
-    <section>questions</section>
-    <footer>Footer</footer>
+
+    <!--Patrick Our residences -->
+
+    <section>
+      <h1 class="text-center font-Montserrat font-bold text-4xl py-8">
+        Our Popular Residences
+      </h1>
+      <div class="flex flex-row justify-center gap-12">
+        <div
+          class="w-[382px] h-[534px] rounded-2xl shadow-lg overflow-hidden bg-[#ddc7bb] font-Montserrat"
+        >
+          <img src="/residence1.png" alt="residence1" />
+          <div>
+            <div class="flex items-center gap-3">
+              <img src="location.png" alt="location" class="w-5 h-5 ml-3" />
+              <div>
+                <h2 class="text-lg font-semibold py-2">
+                  San Francisco, California
+                </h2>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 py-1">
+              <img src="rooms.png" alt="location" class="w-5 h-5 ml-3" />
+              <div>
+                <h2 class="text-lg font-semibold">4 Rooms</h2>
+              </div>
+              <div class="flex items-center gap-3 py-1">
+                <img src="size.png" alt="location" class="w-5 h-5 ml-6" />
+                <div>
+                  <h2 class="text-lg font-semibold py-2">3,500 sq ft</h2>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="flex items-center gap-3 mt-4"></div>
+              <div class="flex items-center gap-3">
+                <div class="flex items-center gap-3">
+                  <button
+                    class="bg-button text-white font-bold py-2 px-4 rounded-lg hover:opacity-80 ml-3"
+                  >
+                    Sign up
+                  </button>
+                  <div>
+                    <h2 class="text-lg font-semibold ml-28">$ 2,500,000</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-[382px] h-[534px] rounded-2xl shadow-lg overflow-hidden bg-[#ddc7bb] font-Montserrat"
+        >
+          <img src="/residence2.png" alt="residence2" />
+          <div>
+            <div class="flex items-center gap-3">
+              <img src="location.png" alt="location" class="w-5 h-5 ml-3" />
+              <div>
+                <h2 class="text-lg font-semibold py-2">
+                  Beverly Hills, California
+                </h2>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 py-1">
+              <img src="rooms.png" alt="location" class="w-5 h-5 ml-3" />
+              <div>
+                <h2 class="text-lg font-semibold">3 Rooms</h2>
+              </div>
+              <div class="flex items-center gap-3 py-1">
+                <img src="size.png" alt="location" class="w-5 h-5 ml-6" />
+                <div>
+                  <h2 class="text-lg font-semibold py-2">1,500 sq ft</h2>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="flex items-center gap-3 mt-4"></div>
+              <div class="flex items-center gap-3">
+                <div class="flex items-center gap-3">
+                  <button
+                    class="bg-button text-white font-bold py-2 px-4 rounded-lg hover:opacity-80 ml-3"
+                  >
+                    Sign up
+                  </button>
+                  <div>
+                    <h2 class="text-lg font-semibold ml-32">$ 850,000</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-[382px] h-[534px] rounded-2xl shadow-lg overflow-hidden bg-[#ddc7bb] font-Montserrat"
+        >
+          <img src="/residence3.png" alt="residence3" />
+          <div>
+            <div class="flex items-center gap-3">
+              <img src="location.png" alt="location" class="w-5 h-5 ml-3" />
+              <div>
+                <h2 class="text-lg font-semibold py-2">
+                  Palo Alto, California
+                </h2>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 py-1">
+              <img src="rooms.png" alt="location" class="w-5 h-5 ml-3" />
+              <div>
+                <h2 class="text-lg font-semibold">6 Rooms</h2>
+              </div>
+              <div class="flex items-center gap-3 py-1">
+                <img src="size.png" alt="location" class="w-5 h-5 ml-6" />
+                <div>
+                  <h2 class="text-lg font-semibold py-2">4,000 sq ft</h2>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="flex items-center gap-3 mt-4"></div>
+              <div class="flex items-center gap-3">
+                <div class="flex items-center gap-3">
+                  <button
+                    class="bg-button text-white font-bold py-2 px-4 rounded-lg hover:opacity-80 ml-3"
+                  >
+                    Sign up
+                  </button>
+                  <div>
+                    <h2 class="text-lg font-semibold ml-28">$ 3,700,000</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
